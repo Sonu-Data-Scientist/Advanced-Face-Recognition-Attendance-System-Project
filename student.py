@@ -266,30 +266,6 @@ class Student:
         f_lbl.place(x=5,y=0,width=720,height=200)
         
         
-        # search  frame
-        
-        #Search_frame=LabelFrame(Right_frame,bd=2,bg="white",relief=RIDGE,text="Search System",font=("times new roman",12,"bold"))
-        #Search_frame.place(x=5,y=135,width=710,height=70)
-        
-        #search_label=Label(Search_frame,text="Search By:",font=("times new roman",15,"bold"),bg="red",fg="white")
-        #search_label.grid(row=0,column=0,padx=10,pady=5,sticky=W)
-        
-        #search_combo=ttk.Combobox(Search_frame,font=("times new roman",13,"bold"),state="readonly",width=15)
-        #search_combo["values"]=("Select","Roll_No","Phone_No","Student_Id")
-        #search_combo.current(0)
-        #search_combo.grid(row=0,column=1,padx=2,pady=10,sticky=W)
-        
-        #search_entry=ttk.Entry(Search_frame,width=15,font=("times new roman",13,"bold"))
-        #search_entry.grid(row=0,column=2,padx=10,pady=5,sticky=W)
-        
-        
-        
-        #search_btn=Button(Search_frame,text="Search",width=12,font=("times new roman",12,"bold"),bg="blue",fg="white")
-        #search_btn.grid(row=0,column=3,padx=4)
-        
-       
-        #showAll_btn=Button(Search_frame,text="Show All",width=12,font=("times new roman",12,"bold"),bg="blue",fg="white")
-        #showAll_btn.grid(row=0,column=4,padx=4)
         
         
         # table frame
