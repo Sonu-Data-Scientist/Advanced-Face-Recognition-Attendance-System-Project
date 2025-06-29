@@ -122,7 +122,7 @@ class Face_Recognition:
         clf=cv2.face.LBPHFaceRecognizer_create()
         clf.read("classifier.xml")
         
-        #test_img = cv2.imread("data/user.1.1.jpg")
+        test_img = cv2.imread("data/user.1.1.jpg")
         video_cap=cv2.VideoCapture(0)
         
         while True:
