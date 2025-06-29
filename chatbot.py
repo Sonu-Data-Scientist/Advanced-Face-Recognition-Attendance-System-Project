@@ -91,46 +91,46 @@ class ChatBot:
         if (self.entry.get()=='hello'):
             self.text.insert(END,'\n\n'+'Bot: Hi')
             
-        elif (self.entry.get()=='Hi'):
+        elif (self.entry.get()=='hi'):
             self.text.insert(END,'\n\n'+'Bot: Hello')
             
-        elif (self.entry.get()=='How Are You'):
+        elif (self.entry.get()=='how are you'):
             self.text.insert(END,'\n\n'+'Bot: Fine and you')
             
-        elif (self.entry.get()=='Fantastic'):
+        elif (self.entry.get()=='fantastic'):
             self.text.insert(END,'\n\n'+'Bot: Nice To Hear')
             
-        elif (self.entry.get()=='Who created you'):
+        elif (self.entry.get()=='who created you'):
             self.text.insert(END,'\n\n'+'Bot: Sonu Yadav did using python')
             
-        elif (self.entry.get()=='What is your name'):
+        elif (self.entry.get()=='what is your name'):
             self.text.insert(END,'\n\n'+'Bot: My name is Mr. Hacker')
             
         
             
-        elif (self.entry.get()=='Can you speak marathi'):
+        elif (self.entry.get()=='can you speak marathi'):
             self.text.insert(END,'\n\n'+'Bot: I am  still learning it...')
             
         elif (self.entry.get()=='what is machine learning'):
             self.text.insert(END,'\n\n'+'Bot: Machine Learning is the science of making computers learn from data and improve their performance over time without being explicitly programmed.')
             
-        elif (self.entry.get()=='How does face recognition work'):
+        elif (self.entry.get()=='how does face recognition work'):
             self.text.insert(END,'\n\n'+'Bot: Face recognition works by first detecting a face using techniques like Haar Cascade or deep learning, then extracting unique facial features (like distance between eyes, nose shape, etc.), and finally comparing these features with a stored database using algorithms like LBPH, EigenFaces, or FaceNet to identify or verify the person.')
             
             
-        elif (self.entry.get()=='How does facial recognition work step by step?'):
+        elif (self.entry.get()=='how does facial recognition work step by step?'):
             self.text.insert(END,'\n\n'+'Bot: Facial recognition works step by step by detecting a face, extracting facial features, comparing them with a stored database, and identifying the person based on the best match.')   
             
          
-        elif (self.entry.get()=='How many countries use facial recognition'):
+        elif (self.entry.get()=='how many countries use facial recognition'):
             self.text.insert(END,'\n\n'+'Bot:As of now, over 100 countries use facial recognition technology in some form, including for surveillance, security, law enforcement, airport screening, and mobile authentication.')
             
             
-        elif (self.entry.get()=='What is python programming'):
+        elif (self.entry.get()=='what is python programming'):
             self.text.insert(END,'\n\n'+'Bot: Python programming is the process of writing code using the Python language, a high-level, easy-to-read, and versatile programming language used for web development, data analysis, automation, machine learning, AI, software development, and more.')    
             
             
-        elif (self.entry.get()=='What is chatbot'):
+        elif (self.entry.get()=='what is chatbot'):
             self.text.insert(END,'\n\n'+'Bot: A chatbot is a computer program that can simulate human conversation using text or voice, and is designed to interact with users automatically — often used in websites, apps, or customer service.')   
             
          
