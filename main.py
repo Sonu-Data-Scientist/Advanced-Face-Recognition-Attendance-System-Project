@@ -13,6 +13,16 @@ from face_recognition import Face_Recognition
 from attendance import Attendance
 from developer import Developer
 from help import Help
+from chatbot import ChatBot
+
+
+
+
+
+
+
+
+
 
 class Face_Recognition_System:
     def __init__(self,root):
@@ -115,11 +125,11 @@ class Face_Recognition_System:
         img7=img7.resize((220,220),Image.LANCZOS)
         self.photoimg7=ImageTk.PhotoImage(img7)
         
-        b1=Button(bg_img,image=self.photoimg7,cursor="hand2",command=self.help_data)
-        b1.place(x=1100,y=100,width=220,height=220)
+        #b1=Button(bg_img,image=self.photoimg7,cursor="hand2",command=self.help_data)
+        #b1.place(x=1100,y=100,width=220,height=220)
         
-        b1_1=Button(bg_img,text="Help Desk",cursor="hand2",command=self.help_data,font=("times new roman",15,"bold"),bg="darkblue",fg="white")
-        b1_1.place(x=1100,y=300,width=220,height=40)
+        #b1_1=Button(bg_img,text="Help Desk",cursor="hand2",command=self.help_data,font=("times new roman",15,"bold"),bg="darkblue",fg="white")
+        #b1_1.place(x=1100,y=300,width=220,height=40)
         
          # Train data button
         img8=Image.open(r"D:\Face Recognition, Student Attendance System\college_images\Train.jpg")
@@ -165,6 +175,21 @@ class Face_Recognition_System:
         b1_1=Button(bg_img,text="Exit",cursor="hand2",command=self.iExit,font=("times new roman",15,"bold"),bg="darkblue",fg="white")
         b1_1.place(x=1100,y=580,width=220,height=40)
         
+        #chat button
+        img_chat=Image.open(r"college_images\chat.jpg")
+        img_chat=img_chat.resize((220,220),Image.LANCZOS)
+        self.photoimg_chat=ImageTk.PhotoImage(img_chat)
+        
+        bchat=Button(bg_img,image=self.photoimg_chat,cursor="hand2",command=self.chatbot)
+        bchat.place(x=1100,y=100,width=220,height=220)
+        
+        b1_chat=Button(bg_img,text="ChatBot",cursor="hand2",command=self.chatbot,font=("times new roman",15,"bold"),bg="darkblue",fg="white")
+        b1_chat.place(x=1100,y=300,width=220,height=40)
+        
+        
+        
+    #photo sample button
+        
     def open_img(self):
         os.startfile("data")
         
@@ -204,12 +229,16 @@ class Face_Recognition_System:
         self.app=Developer(self.new_window)
         
         
-    def help_data(self):
+    #def help_data(self):
+        #self.new_window=Toplevel(self.root)
+        #self.app=Help(self.new_window)
+        
+        
+    def chatbot(self):
         self.new_window=Toplevel(self.root)
-        self.app=Help(self.new_window)
+        self.app=ChatBot(self.new_window)
         
-        
-        
+            
         
         
       
