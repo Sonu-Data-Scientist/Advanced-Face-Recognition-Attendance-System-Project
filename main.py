@@ -18,12 +18,6 @@ from chatbot import ChatBot
 
 
 
-
-
-
-
-
-
 class Face_Recognition_System:
     def __init__(self,root):
         self.root=root
