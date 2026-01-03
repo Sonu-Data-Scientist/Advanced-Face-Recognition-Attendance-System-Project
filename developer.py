@@ -1,108 +1,101 @@
-from tkinter import*
-from tkinter import ttk
-from PIL import Image,ImageTk
-from tkinter import messagebox
-import mysql.connector
-import cv2
-
-
+from tkinter import *
+from PIL import Image, ImageTk
+import os
 
 class Developer:
     def __init__(self,root):
         self.root=root
         self.root.geometry("1920x1080+0+0")
         self.root.title("Face Recognition Attendance System")
-        
-        title_lbl=Label(self.root,text="DEVELOPER",font=("times new roman",35,"bold"),bg="white",fg="blue")
-        title_lbl.place(x=0,y=0,width=1530,height=45)
-        
-        img_top=Image.open(r"college_images\dev.jpg")
-        img_top=img_top.resize((1530,720),Image.LANCZOS)
-        self.photoimg_top=ImageTk.PhotoImage(img_top)
-        
-        f_lbl=Label(self.root,image=self.photoimg_top)
-        f_lbl.place(x=0,y=55,width=1530,height=720)
-        
-        # main frame
-        main_frame=Frame(f_lbl,bd=2,bg="white")
-        main_frame.place(x=1000,y=0,width=500,height=600)
-        
-        img_top1=Image.open(r"college_images\WhatsApp Image 2025-05-22 at 11.15.44 AM.jpeg")
-        img_top1=img_top1.resize((200,200),Image.LANCZOS)
-        self.photoimg_top1=ImageTk.PhotoImage(img_top1)
-        
-        f_lbl=Label(main_frame,image=self.photoimg_top1)
-        f_lbl.place(x=300,y=0,width=200,height=200)
-        
-        # Developer info
-        dev_label=Label(main_frame,text="Hello My Name Is Sonu Yadav",font=("times new roman",16,"bold"),bg="white")
-        dev_label.place(x=0,y=5)
-        
-        dev_label=Label(main_frame,text="I Am A Python Devloper ",font=("times new roman",16,"bold"),bg="white")
-        dev_label.place(x=0,y=40)
-        
-        
-        img2=Image.open(r"D:\Face Recognition, Student Attendance System\college_images\KPIs-and-Agile-software-development-metrics-for-teams-1.jpg")
-        img2=img2.resize((500,390),Image.LANCZOS)
-        self.photoimg2=ImageTk.PhotoImage(img2)
-        
-        f_lbl=Label(main_frame,image=self.photoimg2)
-        f_lbl.place(x=0,y=210,width=500,height=390)
-        
-    
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-if __name__== "__main__":
-    root=Tk()
-    obj=Developer(root)
+        self.root.configure(bg="#f0f0f0")
+
+        # ===== TITLE =====
+        title = Label(
+            self.root,
+            text="DEVELOPER",
+            font=("Helvetica", 32, "bold"),
+            bg="#0d47a1",
+            fg="white"
+        )
+        title.pack(fill=X)
+
+        # ===== MAIN FRAME =====
+        main_frame = Frame(self.root, bg="white", bd=2, relief=RIDGE)
+        main_frame.pack(fill=BOTH, expand=True, padx=20, pady=15)
+
+        base_dir = os.path.dirname(__file__)
+
+        # ===== LEFT SIDE : TECH IMAGE =====
+        tech_img_path = os.path.join(
+            base_dir,
+            "college_images",
+            "KPIs-and-Agile-software-development-metrics-for-teams-1.jpg"
+        )
+        tech_img = Image.open(tech_img_path)
+        tech_img = tech_img.resize((1100, 800), Image.LANCZOS)
+        self.tech_photo = ImageTk.PhotoImage(tech_img)
+
+        left_label = Label(main_frame, image=self.tech_photo, bd=0)
+        left_label.pack(side=LEFT, padx=10, pady=10)
+
+        # ===== RIGHT SIDE PANEL (WIDTH INCREASED) =====
+        info_frame = Frame(main_frame, bg="white", width=500)
+        info_frame.pack(side=RIGHT, fill=Y, padx=20, pady=10)
+
+        # ===== INFO CARD (FIXED TEXT CUT ISSUE) =====
+        card = Frame(info_frame, bg="#ffc107", bd=3, relief=RIDGE)
+        card.pack(fill=X, pady=(0,20), padx=10)
+
+        Label(
+            card,
+            text="AUTHOR : SONU YADAV",
+            font=("Helvetica", 18, "bold"),
+            bg="#ffc107",
+            fg="#0d47a1"
+        ).pack(pady=(10,5), padx=10)
+
+        Label(
+            card,
+            text="Data Science Mentor\nat Physics Wallah",
+            font=("Helvetica", 14, "bold"),
+            bg="#ffc107",
+            fg="#0d47a1",
+            justify=CENTER
+        ).pack(pady=5, padx=10)
+
+        Label(
+            card,
+            text="📞 9142022872",
+            font=("Helvetica", 14, "bold"),
+            bg="#ffc107",
+            fg="#0d47a1"
+        ).pack(pady=(5,12), padx=10)
+
+        # ===== BIG VERTICAL PHOTO (RIGHT SIDE FULL) =====
+        profile_path = os.path.join(
+            base_dir,
+            "D:\Face Recognition, Student Attendance System\college_images\WhatsApp Image 2026-01-03 at 10.45.19 AM.jpeg"
+        )
+        profile_img = Image.open(profile_path)
+        profile_img = profile_img.resize((380, 540), Image.LANCZOS)
+        self.profile_photo = ImageTk.PhotoImage(profile_img)
+
+        photo_frame = Frame(info_frame, bg="#0d47a1", bd=4, relief=RIDGE)
+        photo_frame.pack(pady=10)
+
+        photo_label = Label(photo_frame, image=self.profile_photo, bg="white")
+        photo_label.pack()
+
+        # ===== OPTIONAL TEAM IMAGE =====
+        team_img_path = os.path.join(base_dir, "college_images", "dev.jpg")
+        team_img = Image.open(team_img_path)
+        team_img = team_img.resize((420, 200), Image.LANCZOS)
+        self.team_photo = ImageTk.PhotoImage(team_img)
+
+        team_label = Label(info_frame, image=self.team_photo, bd=3, relief=RIDGE)
+        team_label.pack(pady=15)
+
+if __name__ == "__main__":
+    root = Tk()
+    obj = Developer(root)
     root.mainloop()
