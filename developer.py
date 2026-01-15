@@ -56,7 +56,7 @@ class Developer:
 
         Label(
             card,
-            text="Data Science Mentor\nat Physics Wallah",
+            text="Data Science Mentor\nat Physics Wallah & IIT PATNA",
             font=("Helvetica", 14, "bold"),
             bg="#ffc107",
             fg="#0d47a1",
